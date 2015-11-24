@@ -34,6 +34,7 @@ public class Main
 		tf2 = new JTextField();
 		tf2.setBounds(197, 139, 169, 28);
 		tf2.setEditable(false);
+		item = "Encode";
 
 		char[] keyboard = "qwertyuiop[asdfghjkl;zxcvbnm,".toCharArray();
 		JFrame frame = new JFrame("Endode/Decode Text");
@@ -44,11 +45,13 @@ public class Main
 
 		String[] strArr = {"Encode", "Decode"};
 		combo = new JComboBox(strArr);
-		combo.setSelectedIndex(0);
+		combo.setSelectedItem("Encode");
+
 		combo.addActionListener(new ActionListener()
 			{
 				public void actionPerformed(ActionEvent e)
 				{
+
 					item = (String)combo.getSelectedItem();
 				}
 			});
